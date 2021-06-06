@@ -1,68 +1,30 @@
 <header>
     <div class="header-container">
-        <!-- <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand" href="#"><img class="logo" src="../../assets/logo.png"></a>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Products</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Solutions</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Pricing</a></li>
-                        <button class="login-btn">Login</button>
-                        <button class="get-btn">Get Started</button>
-                    </ul>
-                </div>
-            </div>
-        </nav> -->
-
-        <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
+        <nav class="navbar sticky-top navbar-expand-lg navbar-transparent">
+            <a class="navbar-brand" href="#"><img class="logo" src="../../assets/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#">Project name</a>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
-                </ul>
-              </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="../navbar/">Default</a></li>
-              <li><a href="../navbar-static-top/">Static top</a></li>
-              <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </nav>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Products</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Solutions</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <button class="login-btn">Login</button>
+                <button class="get-btn">Get Started</button>
+              </ul>
+            </div>
+          </nav>
 
         <div class="header-content ">
             <div class="row">
-                <div class="header-content-left-block col-lg-6">
+                <div class="header-content-left-block col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="head-box">
                         <div class="text">
                             <h3 class="heading">We make it super<br> simple</h3>
@@ -71,19 +33,19 @@
                         <img src="../../assets/collect_img-video.png" class="animate__animated animate__bounce">
                     </div>
                 </div>
-                <div class="header-content-right-block col-lg-6">
+                <div class="header-content-right-block col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="row">
                         <div class="col-lg-1"></div>
-                        <div class="calc-block col-lg-8">
+                        <div class="calc-block col-lg-8 col-md-8 col-sm-12 col-xs-12">
                             <h5 class="text-center mb-20">Eligibility Calculator</h5>
                             <div class="range-block">
                                 <h6>Monthly Income</h6>
                                 <h3><i class="fal fa-rupee-sign r-icon"></i> {{income}}</h3>
-                                <input [id]="obj.id" type="range" class="form-range" [step]="obj.step"
+                                <input [id]="obj.id" type="range"  [step]="obj.step"
                                     [min]="obj.minValue" [max]="obj.maxValue" [(ngModel)]="obj.answer"
                                     (ngModelChange)="valueChanged($event)">
                                 <div class="row">
-                                    <div class="col-lg-12">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <span class="text-left rangeVal"><i class="fal fa-rupee-sign "></i>
                                             {{obj.minValue}}</span>
                                         <span class="text-right rangeVal max"><i class="fal fa-rupee-sign "></i>
@@ -110,8 +72,9 @@
                                 <div class="row">
                                 <h6 class="col-lg-10">Do you have any existing loans?</h6>
                                 <div class="col-lg-2">
-                                <div class="form-check form-switch switch">
-                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                  <div class="custom-control custom-switch switch">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                    <label class="custom-control-label" for="customSwitch1"></label>
                                   </div>
                                 </div>
                                 </div>
@@ -122,15 +85,15 @@
                                 <input type="text" placeholder="15000">
                             </div>
                         </div>
-                        <div class=" col-lg-3">
+                        <div class=" col-lg-3 col-md-3 col-sm-12 col-xs-12">
                             <div class="amt-block">
                                 <div class="range-block mr">
-                                    <h6 class="text-white">Loan Amout</h6>
-                                    <h4><i class="fal fa-rupee-sign"></i>1,00,000</h4>
+                                    <h6 class="text-white">Loan Amount</h6>
+                                    <h4><i class="fal fa-rupee-sign rs-icon"></i> 1,00,000</h4>
                                 </div>
                                 <div class="range-block mr">
                                     <h6 class="text-white">Your EMI will be</h6>
-                                    <h4><i class="fal fa-rupee-sign"></i>15,000</h4>
+                                    <h4><i class="fal fa-rupee-sign rs-icon"></i> 15,000</h4>
                                 </div>
                                 <button class="login-btn get-money-btn">Get Money</button>
                             </div>
@@ -147,39 +110,39 @@
 <footer>
     <div class="header-container">
         <div class="row">
-            <div class="footer-left-block col-lg-6">
+            <div class="footer-left-block col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="row">
-                            <div class="box col-lg-11 animate__animated animate__bounce">
+                            <div class="box col-lg-11 col-md-11 col-sm-12 col-xs-12 animate__animated animate__bounce">
                                 <img src="../../assets/Get Paid Instantly.png" alt="">
                                 <h6>Quick cash disbursement</h6>
                                 <p>Get terms loans that your business needs within 72 hrs</p>
                             </div>
-                            <div class="box col-lg-11 box col-lg-11 animate__animated animate__bounce">
+                            <div class="box col-lg-11 box col-md-11 col-sm-12 col-xs-12 animate__animated animate__bounce">
                                 <img src="../../assets/Low interest rate.png" alt="">
                                 <h6>Low Interest Rate</h6>
-                                <p>Get terms loans that your business needs within 72 hrs</p>
+                                <p>Achieve your financial goals with an amazing interest rate starting at 13% per annum</p>
                             </div>
-                            <div class="box col-lg-11 box col-lg-11 animate__animated animate__bounce">
+                            <div class="box col-lg-11 box col-md-11 col-sm-12 col-xs-12 animate__animated animate__bounce">
                                 <img src="../../assets/Secure Payments.png" alt="">
                                 <h6>Zero Paperwork</h6>
-                                <p>Get terms loans that your business needs within 72 hrs</p>
+                                <p>Get started instantly by submitting only your basic details & bank statements</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-6 mt">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mt">
                         <div class="row">
-                            <div class="box col-lg-11 box col-lg-11 animate__animated animate__bounce">
+                            <div class="box col-lg-11 box col-md-11 col-sm-12 col-xs-12 animate__animated animate__bounce">
                                 <img src="../../assets/freelancer_feature_icon_6@1.5x.png" alt="">
                                 <h6>Ace your business finances</h6>
-                                <p>Get terms loans that your business needs within 72 hrs</p>
+                                <p>Manage banking, accounting & everything in between, on one platform</p>
                             </div>
-                            <div class="box col-lg-11 box col-lg-11 animate__animated animate__bounce">
+                            <div class="box col-lg-11 box col-md-11 col-sm-12 col-xs-12 animate__animated animate__bounce">
                                 <img src="../../assets/Covid.png" alt="">
                                 <h6>Loan to fight COVID-19</h6>
-                                <p>Get terms loans that your business needs within 72 hrs</p>
+                                <p>Zero EMI for first 3 months on Back-to-Business loans of upto 1 lakh</p>
                             </div>
 
                         </div>
@@ -187,11 +150,11 @@
 
                 </div>
             </div>
-            <div class="footer-right-block col-lg-6">
+            <div class="footer-right-block col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="text-padding">
                     <h1>Boost your business <br>with Open</h1>
-                    <hr class="bottom-border border-mr">
-                    <p>Gets your hands on a term loan that's crafted for your business</p>
+                    <hr class="bottom-border border-mr br-color">
+                    <p>Gets your hands on a term loan that's<br> crafted for your business</p>
                     <button class="login-btn " style="padding:5px 15px">Get an Open account</button>
                 </div>
 

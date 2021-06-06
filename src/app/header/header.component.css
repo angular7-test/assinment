@@ -14,8 +14,11 @@ header{
 .logo{
     width: 90px;
 }
+li.nav-item a{
+    color: #222;
+}
 .header-container{
-width:1200px;
+width:85%;
 margin: 0 auto;
 }
 .header-content-left-block{
@@ -42,7 +45,7 @@ margin: 0 auto;
     opacity: 1;
 }
 .head-box img{
-    width: 450px;
+    width: 415px;
     margin: 20px 0;
 }
 .header-content-right-block{
@@ -54,13 +57,15 @@ margin: 0 auto;
     color: white;
     border: none;
     border-radius: 15px;
-    margin: 0 5px;
+    margin: 0 10px;
+    cursor: pointer;
 }
 .login-btn{
     padding: 0 15px;
     border-radius: 20px;
     border-color: #663399;
-    margin: 0 5px;
+    margin: 0 10px;
+    cursor: pointer;
 }
 .login-btn:hover{
     background: transparent linear-gradient(90deg, #9F62C9 0%, #663399 100%) 0% 0% no-repeat padding-box;
@@ -117,7 +122,7 @@ footer{
     margin: 15px;
     box-shadow: 0px 0px 30px #2321321F;
 }
-.box:hover{
+.box:hover {
     background: transparent linear-gradient(90deg, #9F62C9 0%, #663399 100%) 0% 0% no-repeat padding-box;
     color: white !important;
     cursor: pointer;
@@ -148,10 +153,9 @@ footer{
 }
 
 input[type=range] {
-    height: 23px;
-    /* -webkit-appearance: none; */
     margin: 5px 0;
     width: 100%;
+    background-color: #663399 !important;
   }
   input[type=range]:focus {
     outline: none;
@@ -161,9 +165,11 @@ input[type=range] {
     height: 4px;
     cursor: pointer;
     animate: 0.2s;
+    background-color: #ccc !important;
   }
 
-  input[type=range]::-webkit-slider-thumb {
+   input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
     box-shadow: 0px 0px 0px #000000;
     height: 16px;
     width: 16px;
@@ -173,27 +179,43 @@ input[type=range] {
     -webkit-appearance: none;
     margin-top: -7px;
   }
-  input[type=range]::-webkit-slider-thumb {
-    background: gray;
+  input[type='range']::-moz-range-thumb {
+    background: #333;
+    border-radius: 50%;
+    box-shadow: -1010px 0 0 1000px #666;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    border: 0;
   }
   
-  input[type=range]::-moz-range-thumb {
-    background: gray;
+  input[type="range"]::-moz-range-track {
+    background-color: #ddd;
   }
-  
-  input[type=range]::-ms-thumb {
-    background: gray;
+  input[type="range"]::-moz-range-progress {
+    background-color: #666;
+    height: 20px
   }
+  input[type="range"]::-ms-fill-upper {
+    background-color: #ddd;
+  }
+  input[type="range"]::-ms-fill-lower {
+    background-color: #666;
+  }
+
   .r-icon{
       font-size: 24px;
     }
+    .rs-icon{
+        font-size: 20px;
+      }
 .mb-20{
     margin-bottom: 25px;
 }
 .rangeVal{
     font-size: 12px;
     position: relative;
-    top: -10px;
+    top: 0px;
     color: #999;
 }
 .max{
@@ -207,12 +229,18 @@ input[type=range] {
     border-bottom: 1px solid #333;
     padding-bottom: 5px;
     font-size: 20px;
+    background: transparent;
 }
-.switch{    margin: 0px 40px;
-    padding: 16px;}
+.switch{  padding: 12px 0;
+    text-align: right;}
     .form-check-input:checked {
         background-color: #663399;
         border-color: #663399;
+    }
+    .custom-control-input:checked~.custom-control-label::before {
+        color: #fff;
+        border-color: #663399;
+        background-color: #663399;
     }
     input[type=text]{
         border: none;
@@ -237,3 +265,11 @@ input[type=range] {
     .get-money-btn:hover{
         border: 1px solid white;
     }
+.br-color{border-color: #707070;
+width: 100px;}
+    
+@media only screen and (max-width: 768px) {
+    header{
+      width:max-content;
+    }
+  }
